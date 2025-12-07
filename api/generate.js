@@ -26,7 +26,7 @@ app.post("/api/generate", async (req, res) => {
     );
 
     const prediction = response.data;
-    const imageURL = prediction.output[0]; // first generated image
+    const imageURL = prediction.output[0];
     res.json({ success: true, url: imageURL });
   } catch (err) {
     console.error(err);
